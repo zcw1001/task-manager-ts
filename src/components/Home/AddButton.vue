@@ -17,4 +17,9 @@
 .widthNoPadding {
   width: calc(100% - 80px);
 }
+@media only screen and (max-width: 640px) {
+  .widthNoPadding {
+    width: calc(100% - 40px);
+  }
+}
 </style>

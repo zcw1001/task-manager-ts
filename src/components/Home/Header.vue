@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-14 pb-8 relative">
+  <div class="header pt-14 pb-8 relative">
     <span class="text-3xl font-bold">我的任务</span>
     <div 
       class="w-8 h-8 absolute right-0 bottom-8 cursor-pointer"
@@ -15,5 +15,9 @@
 </script>
 
 <style scoped>
-
+@media only screen and (max-width: 640px) {
+  .header {
+    padding-top: 30px;
+  }
+}
 </style>
