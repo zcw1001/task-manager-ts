@@ -16,6 +16,7 @@
 @media only screen and (max-width: 640px) {
     .main-layout {
         width: 100%;
+        padding: 0 20px;
     }
 }
 </style>
