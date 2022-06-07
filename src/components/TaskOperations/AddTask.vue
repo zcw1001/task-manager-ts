@@ -53,4 +53,9 @@ function addTask() {
 .actions {
   width: calc(100% - 80px);
 }
+@media only screen and (max-width: 640px) {
+  .actions {
+    width: calc(100% - 40px);
+  }
+}
 </style>
