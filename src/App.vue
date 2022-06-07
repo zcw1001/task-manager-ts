@@ -1,8 +1,5 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div class="bg-slate-50 background-image">
+  <div class="bg-slate-100">
     <Suspense>
       <router-view :key="$route.fullPath"></router-view>
       <template #fallback>
@@ -12,11 +9,10 @@
   </div>
 </template>
 
+<script setup lang="ts">
+</script>
+
 <style>
-.background-image {
-  background-image: url('');
-  background-size: cover;
-}
 body, html {
   margin: 0;
   padding: 0;
