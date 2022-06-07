@@ -1,5 +1,5 @@
 <template>
-    <div class="main-layout h-screen relative px-10 bg-white">
+    <div class="main-layout h-screen relative px-10 overflow-hidden bg-white">
         <slot></slot>
     </div>
 </template>
@@ -12,7 +12,10 @@
 .main-layout {
     width: 400px;
     margin: 0 auto;
-    overflow: hidden;
 }
-
+@media only screen and (max-width: 640px) {
+    .main-layout {
+        width: 100%;
+    }
+}
 </style>

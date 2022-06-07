@@ -55,7 +55,7 @@ function toggleCompleted(task: Task) {
   content: '✓';
   color: white;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (max-width: 640px) {
   .task-status:hover::before {
     position: relative;
     left: 1px;
