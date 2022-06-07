@@ -24,19 +24,17 @@ import { initDatabase, insertTasks, getTasks, getDefaultTaskFilter } from '../..
 import { Task } from '../../types'
 
 // Data
-onBeforeMount(async () => {
-  const firstCreated = await initDatabase()
-  if (firstCreated) {
-    await insertTasks([
-      { name: '任务分为一般、重要、紧急三种类型', priority: 0, completed: true }, 
-      { name: '点击任务卡片右上角可以切换任务的完成状态', priority: 1, completed: false }, 
-      { name: '点击任务卡片可以进入任务编辑页面', priority: 1, completed: false }, 
-      { name: '点击任务列表上方的按钮可以过滤任务列表', priority: 1, completed: false }, 
-      { name: '点击下方按钮可以添加新任务', priority: 2, completed: false },
-      { name: '点击页面右上角齿轮可以打开设置页面', priority: 2, completed: false }
-    ])
-  }
-})
+const firstCreated = await initDatabase()
+if (firstCreated) {
+  await insertTasks([
+    { name: '任务分为一般、重要、紧急三种类型', priority: 0, completed: true }, 
+    { name: '点击任务卡片右上角可以切换任务的完成状态', priority: 1, completed: false }, 
+    { name: '点击任务卡片可以进入任务编辑页面', priority: 1, completed: false }, 
+    { name: '点击任务列表上方的按钮可以过滤任务列表', priority: 1, completed: false }, 
+    { name: '点击下方按钮可以添加新任务', priority: 2, completed: false },
+    { name: '点击页面右上角齿轮可以打开设置页面', priority: 2, completed: false }
+  ])
+}
 let taskFilter: number = parseInt(getDefaultTaskFilter())
 let tasks: Task[] = []
 let curTasks: Task[] = reactive([])
