@@ -17,6 +17,8 @@
       ></div>
       <div class="pt-3 text-lg">{{ task.name }}</div>
     </div>
+
+    <div v-if="!tasks.length" class="text-center">没有任务</div>
   </div>
 </template>
 
